@@ -1,0 +1,16 @@
+.search-result h2{
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.search-result h3{
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.search-result ol {
+    list-style: decimal;
+    box-sizing: border-box;
+    padding-left:1rem;
+    margin: 1rem 0;
+}
