@@ -8,7 +8,7 @@ function Home() {
     return (
         <section className="home">
         <InfoContainer>
-          <h2 class="content__title">Acompanhe sua pontuação!</h2>
+          <h2 className="content__title">Acompanhe sua pontuação!</h2>
           <ul>
               <li>Crie um novo jogo</li>
               <li>Insira os nomes dos jogadores</li>
