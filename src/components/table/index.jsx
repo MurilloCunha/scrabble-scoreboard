@@ -20,7 +20,6 @@ function Table({ playersList }) {
   useEffect(()=>{
     const tbody = document.querySelector('tbody')
     tbody.scrollTop = tbody.scrollHeight
-    console.log('rodou')
   },[scoreRowCount])
   return (
     <table className="scoreboard__table">
