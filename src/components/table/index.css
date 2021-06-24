@@ -26,14 +26,14 @@
 .scoreboard__table th{
     border-bottom: 2px solid #FFF;
 }
-.scoreboard__table th>span{
+.scoreboard__table th>span, tfoot span{
     display:block;
     min-width: 3.5rem;
     height: 100%;
     padding: 0.1rem;
 }
 
-.scoreboard__table thead{
+.scoreboard__table thead, tfoot{
     display: block;
     height:3rem;
     width:100%;
@@ -43,6 +43,7 @@
     height:40vh;
     overflow: scroll;
     width:100%;
+    scroll-behavior: auto;
 }
 
 .scoreboard__table-total{

@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import ScoreInput from '../score-input'
 
 function Table({ playersList }) {
@@ -14,8 +14,14 @@ function Table({ playersList }) {
     const sameScoreAmmount = playersScoreLength.every(val => val === playersScoreLength[0])
 
     sameScoreAmmount ? setScoreRowCount([...scoreRowCount,scoreRowCount.length]) : setScoreRowCount(scoreRowsArray)
+
   }, [playersList, scoreRowCount])
 
+  useEffect(()=>{
+    const tbody = document.querySelector('tbody')
+    tbody.scrollTop = tbody.scrollHeight
+    console.log('rodou')
+  },[scoreRowCount])
   return (
     <table className="scoreboard__table">
       <thead>
@@ -34,10 +40,12 @@ function Table({ playersList }) {
             </td>)}
           </tr>
         )}
-        <tr>
-          {playersList.map(player => <td key={`total_${player.name}`} className="scoreboard__table-total">{player.totalScore}</td>)}
-        </tr>
       </tbody>
+      <tfoot>
+        <tr>
+          {playersList.map(player => <td key={`total_${player.name}`} className="scoreboard__table-total"><span>{player.totalScore}</span></td>)}
+        </tr>
+      </tfoot>
     </table>
 
   )
