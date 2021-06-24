@@ -2,9 +2,9 @@ import React from 'react'
 
 function InfoContainer(props) {
     return (
-        <div class="info-container">
+        <article class="info-container">
             {props.children}
-        </div>
+        </article>
     )
 }
 
