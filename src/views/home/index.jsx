@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 import InfoContainer from '../../components/info-container/'
 import Button from '../../components/button/'
 
@@ -15,7 +17,10 @@ function Home() {
               <li>Descubra quem venceu!</li>
           </ul>
         </InfoContainer>
-        <Button>Novo Jogo</Button>
+        <Link to={"/players-setup"}>
+            <Button>Novo Jogo</Button>
+        </Link>
+        
         </section>
     )
 }
