@@ -20,7 +20,7 @@ function Table({ playersList }) {
     <table className="scoreboard__table">
       <thead>
         <tr>
-          {playersList.map(player => <th key={`header_${player.name}`}>{player.name}</th>)}
+          {playersList.map(player => <th key={`header_${player.name}`}><span>{player.name}</span></th>)}
         </tr>
       </thead>
       <tbody>
