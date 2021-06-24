@@ -1,4 +1,4 @@
-import { player } from "../player/player.js"
+import { player } from "../player/"
 
 export class playersList{
     constructor(){
