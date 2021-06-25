@@ -25,7 +25,10 @@ function Table({ playersList }) {
     <table className="scoreboard__table">
       <thead>
         <tr>
-          {playersList.map(player => <th key={`header_${player.name}`}><span>{player.name}</span></th>)}
+          {playersList.map(player => 
+            <th key={`header_${player.name}`}>
+              <span>{player.name}</span>
+            </th>)}
         </tr>
       </thead>
       <tbody>
@@ -33,9 +36,11 @@ function Table({ playersList }) {
           <tr>
             {playersList.map(player =>
             <td key={`${player.name}_${scoreRow}`}>
-              {
-                player.score[scoreRow] ? player.score[scoreRow] : <ScoreInput onBlur={(event) => handleScoreChange(event,player)} />
-              }
+              <span>
+                {
+                  player.score[scoreRow] ? player.score[scoreRow] : <ScoreInput onBlur={(event) => handleScoreChange(event,player)} />
+                }
+              </span>
             </td>)}
           </tr>
         )}
