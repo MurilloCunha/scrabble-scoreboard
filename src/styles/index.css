@@ -9,6 +9,7 @@
 @import url(../components/score-input/);
 @import url(../components/search-result/);
 @import url(../components/modal/);
+@import url(../components/game-stats/);
 @import url(../views/home/);
 @import url(../views/players-setup/);
 @import url(../views/scoreboard/);

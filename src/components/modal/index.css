@@ -20,7 +20,9 @@
   flex-wrap: wrap;
 
 }
-
+.modal__container a{
+  width: 100%;
+}
 .modal__close-button{
   background-color: transparent;
   box-sizing: border-box;
