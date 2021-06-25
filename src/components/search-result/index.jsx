@@ -1,8 +1,8 @@
 import React from 'react'
-import InfoContainer from '../info-container/'
+
 function SearchResult({result}) {
     return (
-      <InfoContainer >
+      < >
         {result.map(search =>
           <div className="search-result">
             <h2>{search.word}</h2>
@@ -16,7 +16,7 @@ function SearchResult({result}) {
             ))}
           </div>
         )}
-      </InfoContainer>
+      </>
     )
 }
 
