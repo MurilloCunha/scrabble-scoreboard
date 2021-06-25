@@ -1,10 +1,9 @@
 import React from 'react'
 
-function ScoreInput({id}) {
+function ScoreInput(props) {
+
     return (
-    <div class="score-input">
-        <input type="number" min={0} data-playerID={id}></input>
-    </div>
+    <input className="score-input" type="number" min={0} {...props}></input>
     )
 }
 

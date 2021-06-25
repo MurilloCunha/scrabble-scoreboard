@@ -4,8 +4,11 @@
 @import url(../components/logo/);
 @import url(../components/info-container/);
 @import url(../components/player-input/);
-@import url(../components/scoreboard/);
+@import url(../components/table/);
 @import url(../components/search-input/);
 @import url(../components/score-input/);
 @import url(../components/search-result/);
+@import url(../components/modal/);
 @import url(../views/home/);
+@import url(../views/players-setup/);
+@import url(../views/scoreboard/);
