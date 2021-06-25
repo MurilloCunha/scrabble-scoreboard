@@ -1,11 +1,17 @@
+.search-result{
+    margin-bottom: 2rem;
+}
 .search-result h2{
     font-size: 1.6rem;
     margin-bottom: 0.5rem;
+    color: var(--scrabble-tile-text)
 }
 
 .search-result h3{
     font-style: italic;
     letter-spacing: 1px;
+    color: var(--scrabble-tile-text)
+
 }
 
 .search-result ol {
@@ -13,4 +19,9 @@
     box-sizing: border-box;
     padding-left:1rem;
     margin: 1rem 0;
+    color: var(--scrabble-tile-text)
+}
+
+.search-result li{
+    margin:1rem 0;
 }
