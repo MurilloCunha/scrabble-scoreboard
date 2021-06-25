@@ -26,7 +26,7 @@ tfoot {
     border-bottom: 2px solid #fff;
 }
 
-.scoreboard__table tr td:first-child{
+.scoreboard__table tr td:not(:last-child){
     border-right: 2px solid #fff;
 }
 

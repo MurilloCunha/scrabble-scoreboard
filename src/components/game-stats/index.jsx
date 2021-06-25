@@ -1,8 +1,10 @@
 import React, { useContext } from 'react'
 import Match from '../../context/status'
+import MatchDuration from '../../context/duration'
 
-function GameStats(props) {
+function GameStats() {
   const MatchPlayers = useContext(Match)
+  const matchTimer = useContext(MatchDuration)
 
   const winner = MatchPlayers.all.reduce((compare,player) =>
    compare.totalScore > player.totalScore ? compare : player
@@ -24,7 +26,6 @@ function GameStats(props) {
     player:playerLowerScore.name
   }
 
-  console.log(playerLowerScore)
   return (
     <section className="game-stats">
       <article className="game-stats__winner">
@@ -45,7 +46,7 @@ function GameStats(props) {
         <ul>
          <li>Maior pontuação: {higherScore.score}({higherScore.player})</li> 
          <li>Menor pontuação: {lowerScore.score}({lowerScore.player})</li>
-         <li>Tempo de jogo: {props.time}</li> 
+         <li>Tempo de jogo: {matchTimer.getDuration()}</li> 
         </ul>
       </article>
     </section>
