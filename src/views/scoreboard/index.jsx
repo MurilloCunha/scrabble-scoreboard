@@ -12,7 +12,6 @@ function Scoreboard() {
   const [modalContent, setModalContent] = useState()
 
   const handleModal = useCallback((content) => {
-    console.log(content)
     setModalContent(content)
     setModal(!modal)
   }, [modal])
