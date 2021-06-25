@@ -13,6 +13,7 @@ function Scoreboard() {
   const matchTimer = useContext(MatchDuration)
   const [modal, setModal] = useState('')
   const [modalContent, setModalContent] = useState()
+  const [address, setAddress] = useState()
 
   const handleModal = useCallback((content) => {
     setModalContent(content)
@@ -21,6 +22,7 @@ function Scoreboard() {
 
   const handleEndGame = useCallback(()=>{
     matchTimer.setEndTime()
+    setAddress('/')
     setModalContent(<GameStats />)
     setModal(!modal)
   },[matchTimer, modal])
@@ -30,7 +32,7 @@ function Scoreboard() {
       <SearchInput resultHandler={handleModal}/>
       <Table playersList={matchPlayers.all} />
       <Button onClick={handleEndGame}>Finalizar</Button>
-      {modal && <Modal onClick={handleModal} >{modalContent}</Modal>}
+      {modal && <Modal onClick={handleModal} to={address}>{modalContent}</Modal>}
     </section>
   )
 }
