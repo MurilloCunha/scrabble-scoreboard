@@ -18,7 +18,8 @@ function Scoreboard() {
   const handleModal = useCallback((content) => {
     setModalContent(content)
     setModal(!modal)
-  }, [modal])
+    address === '/' && matchPlayers.restore()
+  }, [address, matchPlayers, modal])
 
   const handleEndGame = useCallback(()=>{
     matchTimer.setEndTime()
