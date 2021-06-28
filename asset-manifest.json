@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/scrabble-scoreboard/static/css/main.190ff757.chunk.css",
+    "main.js": "/scrabble-scoreboard/static/js/main.7dab0008.chunk.js",
+    "main.js.map": "/scrabble-scoreboard/static/js/main.7dab0008.chunk.js.map",
+    "runtime-main.js": "/scrabble-scoreboard/static/js/runtime-main.47dbfcb2.js",
+    "runtime-main.js.map": "/scrabble-scoreboard/static/js/runtime-main.47dbfcb2.js.map",
+    "static/js/2.76dc616d.chunk.js": "/scrabble-scoreboard/static/js/2.76dc616d.chunk.js",
+    "static/js/2.76dc616d.chunk.js.map": "/scrabble-scoreboard/static/js/2.76dc616d.chunk.js.map",
+    "index.html": "/scrabble-scoreboard/index.html",
+    "static/css/main.190ff757.chunk.css.map": "/scrabble-scoreboard/static/css/main.190ff757.chunk.css.map",
+    "static/js/2.76dc616d.chunk.js.LICENSE.txt": "/scrabble-scoreboard/static/js/2.76dc616d.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/scrabble-scoreboard/static/media/lupa.2eefd2bb.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.47dbfcb2.js",
+    "static/js/2.76dc616d.chunk.js",
+    "static/css/main.190ff757.chunk.css",
+    "static/js/main.7dab0008.chunk.js"
+  ]
+}
