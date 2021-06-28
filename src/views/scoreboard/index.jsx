@@ -23,7 +23,7 @@ function Scoreboard() {
 
   const handleEndGame = useCallback(()=>{
     matchTimer.setEndTime()
-    setAddress('/')
+    setAddress('/scrabble-scoreboard/')
     setModalContent(<GameStats />)
     setModal(!modal)
   },[matchTimer, modal])
