@@ -37,8 +37,9 @@ function Table({ playersList }) {
             {playersList.map(player =>
             <td key={`${player.name}_${scoreRow}`}>
               <span>
+                {console.log(player.score[scoreRow])}
                 {
-                  player.score[scoreRow] ? player.score[scoreRow] : <ScoreInput onBlur={(event) => handleScoreChange(event,player)} />
+                  player.score[scoreRow] >=0 ? player.score[scoreRow] : <ScoreInput onBlur={(event) => handleScoreChange(event,player)} />
                 }
               </span>
             </td>)}
