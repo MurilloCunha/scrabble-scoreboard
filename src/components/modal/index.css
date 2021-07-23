@@ -10,6 +10,7 @@
   justify-content: center;
   box-sizing: border-box;
   padding: 0 2rem;
+  z-index: 2;
 }
 
 .modal__container{
@@ -30,12 +31,15 @@
   margin:0;
   text-align: end;
   height: 2rem;
+  box-shadow: none;
+  color: var(--green2);
 
 }
 
 .modal__content{
   box-sizing: border-box;
   padding: 0 2rem;
+  max-height:25rem;
   overflow:scroll;
   width:100%;
 }
