@@ -1,13 +1,21 @@
+.logo{
+    background: var(--green2);
+    padding-bottom:1rem;
+    box-shadow: 2px 0px 4px var(--scrabble-tile-text);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
 .logo__image{
-    width:100%;
+    width:70%;
     filter: brightness(0%) invert(1);
-    margin-top:-3rem;
+    margin-top:-2.5rem;
+    margin-bottom:-3rem;
 }
 
 .logo__title{
     font-family:  Helvetica, sans-serif;
     text-align: center;
-    margin-top: -5rem;
 }
 
 .logo__title--tile{

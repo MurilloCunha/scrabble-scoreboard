@@ -4,12 +4,15 @@
 @import url(../components/logo/);
 @import url(../components/info-container/);
 @import url(../components/player-input/);
-@import url(../components/table/);
 @import url(../components/search-input/);
 @import url(../components/score-input/);
 @import url(../components/search-result/);
 @import url(../components/modal/);
 @import url(../components/game-stats/);
+@import url(../components/footer/);
+@import url(../components/player-score/);
+@import url(../components/loader/);
 @import url(../views/home/);
 @import url(../views/players-setup/);
 @import url(../views/scoreboard/);
+@import url(../views/error404/);

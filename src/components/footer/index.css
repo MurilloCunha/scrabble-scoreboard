@@ -1,0 +1,6 @@
+footer{
+  background: var(--green2);
+  height:2rem;
+  align-self: flex-end;
+  box-shadow: -2px 0px 4px var(--scrabble-tile-text);
+}

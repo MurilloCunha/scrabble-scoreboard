@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react'
 
 import SearchResult from '../search-result/'
-import { dictionaryAPI } from '../../api/dictionary'
+import dictionaryService from '../../services/dictionary'
 
 function SearchInput({resultHandler}) {
   const [inputValue, setInputValue] = useState('')
@@ -12,20 +12,21 @@ function SearchInput({resultHandler}) {
   },[])
 
   const handleSearch = useCallback(() => {
-    dictionaryAPI(inputValue)
+    dictionaryService.search(inputValue)
       .then(response => resultHandler(<SearchResult result={response}/>))
   }, [inputValue, resultHandler])
   
   return (
-    <div className="search-input-wrapper">
+    <section className="search-input-wrapper">
       <input
         className="search-input"
         type="text"
         placeholder="Consulte o dicionário"
         onChange={handleInput}
+        onBlurCapture={handleSearch}
       />
       <button className="search-button" onClick={handleSearch}></button>
-    </div>
+    </section>
   )
 }
 
