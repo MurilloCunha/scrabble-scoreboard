@@ -12,6 +12,7 @@
 @import url(../components/footer/);
 @import url(../components/player-score/);
 @import url(../components/loader/);
+@import url(../components/score-edit-menu/);
 @import url(../views/home/);
 @import url(../views/players-setup/);
 @import url(../views/scoreboard/);

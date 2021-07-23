@@ -16,12 +16,12 @@ function Scoreboard() {
   const [modalContent, setModalContent] = useState()
   const [address, setAddress] = useState()
   const [round, setRound] = useState(0)
+  const [update, setUpdate] = useState(false)
 
   const handleModal = useCallback((content) => {
     setModalContent(content)
     setModal(!modal)
-    matchPlayers.restore()
-    address === '/' && matchPlayers.restore()
+    address === '/scrabble-scoreboard/' && matchPlayers.restore()
   }, [address, matchPlayers, modal])
 
   const handleEndGame = useCallback(()=>{
@@ -44,12 +44,28 @@ function Scoreboard() {
     event.target.value = ''
 
   }, [round])
+
+  const handleEdit = useCallback((scoreIndex,player,action,value) =>{
+
+    const selectedPlayer = matchPlayers.player(player) 
+    action === 'remove' && selectedPlayer.removeScore(scoreIndex)
+    action === 'edit' && selectedPlayer.editScore(scoreIndex,value)
+    setUpdate(!update)
+  },[matchPlayers, update])
+
   return (
     <main className='scoreboard'>
       <SearchInput resultHandler={handleModal}/>
       <InfoContainer>
         <div style={{display:'flex',justifyContent:'space-evenly'}}>
-          {matchPlayers.all.map(player => <PlayerScore player={player} onScoreChange={handleScoreChange} round={round}/>)}
+          {matchPlayers.all.map(player => 
+            <PlayerScore 
+              player={player}
+              onScoreChange={handleScoreChange}
+              round={round}
+              edit={handleEdit}
+              />
+          )}
         </div>
       </InfoContainer>
       <Button onClick={handleEndGame}>Finalizar</Button>
