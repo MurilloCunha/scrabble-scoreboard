@@ -1,5 +1,7 @@
 import React from 'react'
 
+import scrabble from '../../icons/Scrabble-logo.png'
+
 function Logo() {
     return (
     <header className="logo">
