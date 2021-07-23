@@ -1,9 +1,12 @@
 .score-input{
-    border: 2px dashed #FFF;
-    width: 100%;
-    height: 3rem;
-    color: #FFF;
+    background-color:var(--bg-color);
+    min-width: 3rem;
+    width:50%;
+    height: 2rem;
+    margin: 1rem 0rem;
+    color: var(--green2);
     text-align: center;
-    border-radius: 10px;
     font-size: 1.2rem;
+    box-sizing: border-box;
+    border-radius: 10px;
 }
