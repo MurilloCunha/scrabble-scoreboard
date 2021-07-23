@@ -7,7 +7,7 @@
 }
 .score-edit-menu input{
   background: #fff;
-  width:100%;
+  width: 80%;
 }
 .score-edit-menu input:focus{
   background: var(--bg-color);
@@ -20,14 +20,8 @@
   font-family: inherit;
   cursor:pointer;
 }
-.score-edit-menu button:first-child{
+.score-edit-menu button:last-child{
   border:1px solid var(--error);
   color:var(--error);
-  border-radius:5px;
-}
-
-.score-edit-menu button:last-child{
-  border:1px solid var(--green2);
-  color:var(--green2);
   border-radius:5px;
 }

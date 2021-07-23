@@ -18,7 +18,7 @@ function ScoreEditMenu({edit,score, player}) {
 
   const handleEdit = (evt,player,action) => {
     const scoreList = player.score
-    const selectedScore = Number(evt.target.parentNode.previousSibling.innerHTML)
+    const selectedScore = Number(evt.target.previousSibling.innerHTML)
     const selectedScoreIndex = scoreList.indexOf(selectedScore)
     edit(selectedScoreIndex,player,action,inputValue)
     setSubMenu(!subMenu)
@@ -33,10 +33,7 @@ function ScoreEditMenu({edit,score, player}) {
         defaultValue={score}
       />
       {subMenu &&
-        <div className="score-edit-menu__buttons">
-          <button type="button" onClick={(evt) => handleEdit(evt,player,'remove')}>X</button>
-          <button onClick={(evt) => handleEdit(evt,player,'edit')}>edit</button>
-        </div>
+        <button type="button" onClick={(evt) => handleEdit(evt,player,'remove')}>X</button>
       }
     </div>
   )
