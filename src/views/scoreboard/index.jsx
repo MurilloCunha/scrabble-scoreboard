@@ -28,7 +28,8 @@ function Scoreboard() {
     setAddress('/scrabble-scoreboard/')
     setModalContent(<GameStats />)
     setModal(!modal)
-  },[matchTimer, modal])
+    matchPlayers.restore()
+  },[matchPlayers, matchTimer, modal])
 
   const handleScoreChange = useCallback((event,player) => {
     let { value } = event.target
