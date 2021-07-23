@@ -25,7 +25,6 @@ function PlayersSteup() {
     matchTimer.setStartTime()
     location.push("/scoreboard")
   }
-
   return (
     <main className="players-setup">
       <form onSubmit={handleSubmit}>

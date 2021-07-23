@@ -12,7 +12,7 @@ import PlayerScore from '../../components/player-score'
 function Scoreboard() {
   const matchPlayers = useContext(Match)
   const matchTimer = useContext(MatchDuration)
-  const [modal, setModal] = useState('')
+  const [modal, setModal] = useState(false)
   const [modalContent, setModalContent] = useState()
   const [address, setAddress] = useState()
   const [round, setRound] = useState(0)
@@ -20,6 +20,7 @@ function Scoreboard() {
   const handleModal = useCallback((content) => {
     setModalContent(content)
     setModal(!modal)
+    matchPlayers.restore()
     address === '/' && matchPlayers.restore()
   }, [address, matchPlayers, modal])
 
@@ -28,8 +29,7 @@ function Scoreboard() {
     setAddress('/scrabble-scoreboard/')
     setModalContent(<GameStats />)
     setModal(!modal)
-    matchPlayers.restore()
-  },[matchPlayers, matchTimer, modal])
+  },[ matchTimer, modal])
 
   const handleScoreChange = useCallback((event,player) => {
     let { value } = event.target
