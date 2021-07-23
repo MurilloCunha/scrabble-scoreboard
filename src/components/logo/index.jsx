@@ -4,8 +4,8 @@ import scrabble from '../../icons/Scrabble-logo.png'
 
 function Logo() {
     return (
-    <section className="logo">
-        <img className="logo__image" src={scrabble} alt="scrabble logo" />
+    <header className="logo">
+        <img className="logo__image"src="./Scrabble-logo.png" alt="scrabble logo" />
         <h1 className="logo__title">
             <span className="logo__title--tile">S</span>
             <span className="logo__title--tile">C</span>
@@ -18,7 +18,7 @@ function Logo() {
             <span className="logo__title--tile">R</span>
             <span className="logo__title--tile">D</span>
         </h1>
-    </section> 
+    </header> 
     )
 }
 

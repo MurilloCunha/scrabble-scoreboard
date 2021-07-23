@@ -1,4 +1,6 @@
 .scoreboard{
     box-sizing: border-box;
-    padding: 2rem;
+    padding: 0.5rem 2rem;
+    opacity:0;
+    animation: show var(--showing-time) ease-in-out forwards;
 }
