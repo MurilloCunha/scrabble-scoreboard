@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/scrabble-scoreboard/static/css/main.5fdb18f7.chunk.css",
+    "main.css": "/scrabble-scoreboard/static/css/main.9c4551d0.chunk.css",
     "main.js": "/scrabble-scoreboard/static/js/main.8c65ad33.chunk.js",
     "main.js.map": "/scrabble-scoreboard/static/js/main.8c65ad33.chunk.js.map",
     "runtime-main.js": "/scrabble-scoreboard/static/js/runtime-main.47dbfcb2.js",
@@ -8,14 +8,14 @@
     "static/js/2.a1a5d2cc.chunk.js": "/scrabble-scoreboard/static/js/2.a1a5d2cc.chunk.js",
     "static/js/2.a1a5d2cc.chunk.js.map": "/scrabble-scoreboard/static/js/2.a1a5d2cc.chunk.js.map",
     "index.html": "/scrabble-scoreboard/index.html",
-    "static/css/main.5fdb18f7.chunk.css.map": "/scrabble-scoreboard/static/css/main.5fdb18f7.chunk.css.map",
+    "static/css/main.9c4551d0.chunk.css.map": "/scrabble-scoreboard/static/css/main.9c4551d0.chunk.css.map",
     "static/js/2.a1a5d2cc.chunk.js.LICENSE.txt": "/scrabble-scoreboard/static/js/2.a1a5d2cc.chunk.js.LICENSE.txt",
     "static/media/index.css": "/scrabble-scoreboard/static/media/lupa.2eefd2bb.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.47dbfcb2.js",
     "static/js/2.a1a5d2cc.chunk.js",
-    "static/css/main.5fdb18f7.chunk.css",
+    "static/css/main.9c4551d0.chunk.css",
     "static/js/main.8c65ad33.chunk.js"
   ]
 }
