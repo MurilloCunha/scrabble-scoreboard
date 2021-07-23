@@ -11,6 +11,7 @@
   margin: 0;
   border-bottom: 1px solid var(--green4);
   width:100%;
+  text-align: center;
 
 }
 .playerScore-wrapper p{
