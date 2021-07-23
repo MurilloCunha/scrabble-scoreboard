@@ -10,7 +10,9 @@
     --showing-time: 0.5s;
     --moving-time: 0.2s;
 }
-
+#root{
+    width:100%;
+}
 body{
     display:flex;
     align-items: flex-start;
