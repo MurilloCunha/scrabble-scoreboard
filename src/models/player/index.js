@@ -34,6 +34,10 @@ export class player{
         this._score.push(value)
     }
 
+    editScore(index,value){
+        this._score.splice(index,1,value)
+    }
+
     removeScore(index){
         this._score.splice(index,1)
     }

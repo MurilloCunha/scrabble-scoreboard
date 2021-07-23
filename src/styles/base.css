@@ -26,6 +26,13 @@ body{
     color: #FFF;
 }
 
+@media (min-width:450px){
+    body{
+        margin-left:auto;
+        margin-right: auto;
+    }
+}
+
 @keyframes show {
     0%{
         opacity: 0;
@@ -51,6 +58,16 @@ body{
 @keyframes scoreMove {
     0%{
         transform: translateY(16px);
+        height: 0rem;
+    }
+    100%{
+        transform: translateY(0px);
+        height: 2rem;
+    }
+}
+@keyframes subMenu {
+    0%{
+        transform: translateY(-25px);
         height: 0rem;
     }
     100%{

@@ -47,5 +47,7 @@ export class playersList{
         this._playersList= [new player(1,''),new player(2,'')]
     }
 
-
+    player(searchPlayer){
+        return this._playersList.find(player => player === searchPlayer)
+    }
 }

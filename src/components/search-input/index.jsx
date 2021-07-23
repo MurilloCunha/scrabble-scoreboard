@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react'
 
 import SearchResult from '../search-result/'
 import dictionaryService from '../../services/dictionary'
+import Button from '../button'
 
 function SearchInput({resultHandler}) {
   const [inputValue, setInputValue] = useState('')
@@ -25,7 +26,7 @@ function SearchInput({resultHandler}) {
         onChange={handleInput}
         onBlurCapture={handleSearch}
       />
-      <button className="search-button" onClick={handleSearch}></button>
+      <Button className="search-button" onClick={handleSearch}></Button>
     </section>
   )
 }

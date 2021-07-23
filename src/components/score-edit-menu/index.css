@@ -1,0 +1,33 @@
+.score-edit-menu__buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: subMenu var(--moving-time) ease-in-out forwards;
+
+}
+.score-edit-menu input{
+  background: #fff;
+  width:100%;
+}
+.score-edit-menu input:focus{
+  background: var(--bg-color);
+}
+
+.score-edit-menu button{
+  border:none;
+  margin: 0 0.1rem;
+  background: #fff;
+  font-family: inherit;
+  cursor:pointer;
+}
+.score-edit-menu button:first-child{
+  border:1px solid var(--error);
+  color:var(--error);
+  border-radius:5px;
+}
+
+.score-edit-menu button:last-child{
+  border:1px solid var(--green2);
+  color:var(--green2);
+  border-radius:5px;
+}
