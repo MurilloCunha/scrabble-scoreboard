@@ -17,15 +17,16 @@ function SearchInput({resultHandler}) {
   }, [inputValue, resultHandler])
   
   return (
-    <div className="search-input-wrapper">
+    <section className="search-input-wrapper">
       <input
         className="search-input"
         type="text"
         placeholder="Consulte o dicionário"
         onChange={handleInput}
+        onBlurCapture={handleSearch}
       />
       <button className="search-button" onClick={handleSearch}></button>
-    </div>
+    </section>
   )
 }
 
