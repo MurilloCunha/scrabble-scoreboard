@@ -12,6 +12,11 @@
 }
 #root{
     width:100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    height: 100vh;
 }
 body{
     display:flex;
