@@ -27,10 +27,13 @@
 .modal__close-button{
   background-color: transparent;
   box-sizing: border-box;
-  padding: 0 0.5rem;
+  padding: 0.5rem 1rem;
   margin:0;
   text-align: end;
   height: 2rem;
+  font-size:1.5rem;
+  width: 100%;
+  border: none;
   box-shadow: none;
   color: var(--green2);
 
