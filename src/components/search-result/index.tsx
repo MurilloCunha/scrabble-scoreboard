@@ -1,6 +1,18 @@
 import React from 'react'
 
-function SearchResult({result}) {
+interface WordSearch {
+  result: {
+    word:string,
+    meanings: {
+      partOfSpeech: string,
+      definitions: {
+        definition:string
+      }[]
+    }[]
+  }[],
+}
+
+function SearchResult({ result }: WordSearch) {
     return (
       < >
         {result.map(search =>

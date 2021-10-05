@@ -1,13 +1,24 @@
 import React, { useCallback, useState } from 'react'
-import { isValidNameInput } from '../../utils/input-helpers'
+// import { isValidNameInput } from '../../utils/input-helpers'
 
-function PlayerInput({ player }) {
+interface Player {
+  id: number,
+  name: string,
+  score: number[]
+}
+
+interface PlayerInputProps {
+  player : Player
+}
+
+function PlayerInput({ player }: PlayerInputProps) {
   const [error, setError] = useState(undefined)
 
   const playerInputHandler = useCallback((event) => {
     const { value } = event.target
-    setError(isValidNameInput(value))
-    player.setName(value)
+    // refazer função de validação de nome
+    //setError(isValidNameInput(value))
+    player.name = value
   }, [player])
   return (
     <div className="player-input">

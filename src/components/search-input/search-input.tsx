@@ -1,10 +1,10 @@
 import React, { useCallback, useState } from 'react'
 
-import SearchResult from '../search-result/'
+import SearchResult from '../search-result'
 import dictionaryService from '../../services/dictionary'
-import Button from '../button'
+import Button from '../button/button'
 
-function SearchInput({resultHandler}) {
+function SearchInput({resultHandler}: any) {
   const [inputValue, setInputValue] = useState('')
 
   const handleInput = useCallback((event)=>{
@@ -26,7 +26,7 @@ function SearchInput({resultHandler}) {
         onChange={handleInput}
         onBlurCapture={handleSearch}
       />
-      <Button className="search-button" onClick={handleSearch}></Button>
+      <Button>+</Button>
     </section>
   )
 }
