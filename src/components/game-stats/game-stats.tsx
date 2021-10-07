@@ -1,17 +1,6 @@
-interface ScoreStats {
-  score: number,
-  player: string,
-  word: string,
-}
+import { GameStats } from "../../interfaces"
 
-interface GameStatsProps {
-  winner: string,
-  higherScore: ScoreStats,
-  lowerScore: ScoreStats,
-  gameDuration: string
-}
-
-function GameStats(props: GameStatsProps) {
+function EndGameStats(props: GameStats) {
   const { 
     winner = "test",
     higherScore = { score: 0, player: 'test', word: '' },
@@ -28,8 +17,8 @@ function GameStats(props: GameStatsProps) {
       </article>
       <article className="game-stats__stats">
         <ul>
-          <li>Maior pontuação: {higherScore.word} - {higherScore.score}({higherScore.player})</li>
-          <li>Menor pontuação: {lowerScore.word} - {lowerScore.score}({lowerScore.player})</li>
+          <li>Maior pontuação: {higherScore.score}({higherScore.player})</li>
+          <li>Menor pontuação: {lowerScore.score}({lowerScore.player})</li>
           <li>Tempo de jogo: {gameDuration}</li>
         </ul>
       </article>
@@ -37,4 +26,4 @@ function GameStats(props: GameStatsProps) {
   )
 }
 
-export default GameStats
+export default EndGameStats

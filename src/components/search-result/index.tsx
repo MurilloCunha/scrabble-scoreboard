@@ -1,16 +1,5 @@
 import React from 'react'
-
-interface WordSearch {
-  result: {
-    word:string,
-    meanings: {
-      partOfSpeech: string,
-      definitions: {
-        definition:string
-      }[]
-    }[]
-  }[],
-}
+import { WordSearch } from '../../interfaces'
 
 function SearchResult({ result }: WordSearch) {
     return (

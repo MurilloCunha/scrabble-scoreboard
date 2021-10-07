@@ -1,11 +1,8 @@
 import React, { useCallback, useState } from 'react'
+import { Player } from '../../interfaces'
 // import { isValidNameInput } from '../../utils/input-helpers'
 
-interface Player {
-  id: number,
-  name: string,
-  score: number[]
-}
+
 
 interface PlayerInputProps {
   player : Player
