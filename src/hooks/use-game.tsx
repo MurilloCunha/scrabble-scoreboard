@@ -19,7 +19,7 @@ const initialState: GameState = {
 }
 
 
-function UseGame() {
+function useGame() {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   const addPlayer = (playerName: string): void => {
@@ -44,4 +44,4 @@ function UseGame() {
   return {addPlayer, addScore, deleteScore, startMatch, endMatch, state}
 }
 
-export default UseGame
+export default useGame

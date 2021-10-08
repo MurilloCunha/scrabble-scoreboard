@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-import Home from '../views/home/home'
-import PlayersSetup from '../views/players-setup/players-setup'
-import Scoreboard from '../views/scoreboard/scoreboard'
-import Error404 from '../views/error404'
+import Home from '../home/home'
+import PlayersSetup from '../players-setup/players-setup'
+import Scoreboard from '../scoreboard/scoreboard'
+import Error404 from '../error404'
 
 export enum ROUTES {
   HOME = '/',
