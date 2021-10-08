@@ -20,15 +20,10 @@ export interface Player {
   higherScore: number,
   lowerScore: number
 }
-export interface WordSearch {
-  result: {
-    word: string,
-    meanings: {
-      partOfSpeech: string,
-      definitions: {
-        definition: string
-      }[]
-    }[]
-  }[],
+
+export interface wordData {
+  class: string,
+  meanings: string[],
+  etymology: string
 }
 
