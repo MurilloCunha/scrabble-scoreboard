@@ -1,11 +1,12 @@
-import UseNavigation from "../../hooks/use-navigation";
+import useNavigation from "../../hooks/use-navigation";
 
 const Home = () => {
-  const navigation = UseNavigation()
+  const navigation = useNavigation()
   return (
     <>
-      <button onClick={() => navigation.previous()}>previous</button>
-      <button onClick={() => navigation.next()}>next</button>
+      <h1>Scrabble Scoreboard</h1>
+      <p> Marcador de pontos para acompanhar o jogo de tabuleiro Scrabble</p>
+      <button onClick={() => navigation.next()}>Nova partida</button>
     </>
   );
 }
