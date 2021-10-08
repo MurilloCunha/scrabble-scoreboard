@@ -43,8 +43,8 @@ export const addScoreToPlayer =
         ...player,
         score: [...player.score, score],
         totalScore: scoreSum(player.score,score),
-        higherScore: higherValue(player.score),
-        lowerScore: lowerValue(player.score),
+        higherScore: higherValue([...player.score, score]),
+        lowerScore: lowerValue([...player.score, score]),
       }
       : player
     )
