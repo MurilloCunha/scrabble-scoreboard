@@ -1,10 +1,15 @@
 import React from 'react'
-interface ButtonProps {
-    children: string
+import { StyleVariants } from '../../interfaces'
+import './button.style.scss'
+
+interface ButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+    variant?: StyleVariants
 }
+
 const Button = (props: ButtonProps) => {
+    const { variant = "primary", ...buttonProps } = props
     return (
-        <button {...props}>
+        <button className="button" data-variant={variant} {...buttonProps}>
             {props.children}
         </button>
     )
