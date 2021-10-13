@@ -27,3 +27,14 @@ export interface wordData {
   etymology: string
 }
 
+export interface GameHook {
+  state: GameState,
+  addPlayer: (playerName: string) => void,
+  addScore: (id: number, score: number) => void,
+  deleteScore: (id: number, scoreIndex: number) => void,
+  startMatch: () => void,
+  endMatch: () => void,
+
+}
+
+export type StyleVariants = "primary" | "secondary" | "ghost" | "inactive"
