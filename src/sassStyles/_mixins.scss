@@ -1,0 +1,34 @@
+/* create mixins for reusable code such as breakpoints*/
+
+@mixin colorize($color){
+  background-color: $color;
+  
+  &:hover{
+    background-color: darken($color,8%);
+  }
+}
+
+@mixin variants(){
+
+  &[data-variant="primary"]{
+    @include colorize(green);
+    color: white;
+  }
+
+  &[data-variant="secondary"]{
+    @include colorize(rgb(127, 161, 127));
+    color: white;
+  }
+
+  &[data-variant="ghost"]{
+    @include colorize(white);
+    border:1px solid green;
+    color: green;
+  }
+
+  &[data-variant="inactive"]{
+    @include colorize(#ddd);
+    color: #888;
+    cursor: not-allowed;
+  }
+}
