@@ -38,3 +38,5 @@ export interface GameHook {
 }
 
 export type StyleVariants = "primary" | "secondary" | "ghost" | "inactive"
+
+export const INPUT_PATTERN ='^[a-zA-Z0-9]*$'
