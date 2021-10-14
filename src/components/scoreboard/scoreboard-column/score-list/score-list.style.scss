@@ -1,0 +1,17 @@
+  .score-list{
+    height: 40vh;
+    overflow: hidden auto;
+    width: 100%;
+ 
+  &__score{
+    width: 100%;
+    font-size:1rem;
+    text-align: center;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: rgb(13, 172, 13);
+  }
+}
