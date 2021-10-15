@@ -1,34 +1,40 @@
-import React, { useCallback, useState } from 'react'
 
-import SearchResult from '../search-result'
-import dictionaryService from '../../services/dictionary'
+import { useState } from 'react'
 import Button from '../button/button'
+import searchIcon from './lupa.svg'
+import './search-input.style.scss'
 
-function SearchInput({resultHandler}: any) {
-  const [inputValue, setInputValue] = useState('')
+interface Props {
+  searchFunction: (word: string) => void,
+}
 
-  const handleInput = useCallback((event)=>{
-    const {value} = event.target
-    setInputValue(value)
-  },[])
+function SearchInput(props: Props) {
+  const { searchFunction } = props
+  const [searchWord, setSearchWord] = useState('')
 
-  const handleSearch = useCallback(() => {
-    dictionaryService.search(inputValue)
-      .then(response => resultHandler(<SearchResult result={response}/>))
-  }, [inputValue, resultHandler])
-  
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>): void => {
+    const { key, currentTarget:{ value } } = event
+    if(key === 'Enter'){
+      searchFunction(searchWord)
+      return
+    }
+    setSearchWord(value)
+    return
+  }
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
+    if(searchWord !== ''){
+      searchFunction(searchWord)
+    }
+  }
+
   return (
-    <section className="search-input-wrapper">
-      <input
-        className="search-input"
-        type="text"
-        placeholder="Consulte o dicionário"
-        onChange={handleInput}
-        onBlurCapture={handleSearch}
-      />
-      <Button>+</Button>
-    </section>
+    <div className="search-input" data-testid="search-input">
+      <input type="search" onKeyDown={handleKeyDown} placeholder="Consulte o dicionário..." />
+      <Button variant="transparent" onClick={handleClick}><img src={searchIcon} alt="search" /></Button>
+    </div>
   )
+
 }
 
 export default SearchInput

@@ -43,4 +43,19 @@
     font-size:0.8rem;
     color: red;
   }
+
+  &[data-variant="transparent"]{
+    @include colorize(transparent);
+    color: black;
+    height:3rem;
+    width: 3rem;
+    padding:0.8rem;
+    border:none;
+    box-shadow: none;
+    margin:0;
+
+    &:hover{
+      box-shadow: none;
+    }
+  }
 }
