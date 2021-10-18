@@ -1,5 +1,5 @@
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 import Button from '../button/button'
 import searchIcon from './lupa.svg'
 import './search-input.style.scss'
@@ -12,25 +12,24 @@ function SearchInput(props: Props) {
   const { searchFunction } = props
   const [searchWord, setSearchWord] = useState('')
 
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>): void => {
-    const { key, currentTarget:{ value } } = event
-    if(key === 'Enter'){
-      searchFunction(searchWord)
-      return
-    }
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    const { currentTarget: { value } } = event
     setSearchWord(value)
-    return
   }
 
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
-    if(searchWord !== ''){
-      searchFunction(searchWord)
-    }
+  const handleKeyDown = ( event: React.KeyboardEvent<HTMLInputElement>): void => {
+    const { key } = event
+    key === 'Enter' && searchFunction(searchWord)
+  }
+
+  const handleClick = (): void => {
+    searchWord !== '' && searchFunction(searchWord)
+    
   }
 
   return (
     <div className="search-input" data-testid="search-input">
-      <input type="search" onKeyDown={handleKeyDown} placeholder="Consulte o dicionário..." />
+      <input type="search" onChange={handleChange} onKeyDown={handleKeyDown} value={searchWord} placeholder="Consulte o dicionário..." />
       <Button variant="transparent" onClick={handleClick}><img src={searchIcon} alt="search" /></Button>
     </div>
   )
