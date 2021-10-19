@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from '../home/home'
 import PlayersSetup from '../players-setup/players-setup'
 import ScoreboardView from '../scoreboard/scoreboard-view'
-import Error404 from '../error'
+import Error404 from '../error/error404'
 import useGame from '../../hooks/use-game'
 import Statistics from '../statistics/game-stats'
 
