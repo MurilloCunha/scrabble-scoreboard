@@ -22,9 +22,12 @@ export interface Player {
 }
 
 export interface wordData {
-  class: string,
-  meanings: string[],
-  etymology: string
+  word: string,
+  data:{
+    class: string,
+    meanings: string[],
+    etymology: string
+  }[]
 }
 
 export interface GameHook {
