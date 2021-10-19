@@ -1,59 +1,60 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
+import Button from "../../components/button/button";
+import TextInput from "../../components/text-input/text-input";
 import useNavigation from "../../hooks/use-navigation";
 import { GameHook } from "../../interfaces";
+import { getFormData, hasErrors, registerPlayers } from "../../utils/submit-helpers";
 
-
+import './players-setup.style.scss'
 
 function PlayersSteup(game: GameHook) {
   const navigation = useNavigation()
   const [error, setError] = useState("")
+  const [playerInputs, setPlayerInputs] = useState([1,2])
 
-  const INPUT_PATTERN = {
-    pattern: `^[a-zA-Z0-9]*$`,
-    maxLength: 10
-  }
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-
-    const formData = new FormData(event.currentTarget)
-    const players = formData.getAll('Jogador')
-    const verifyiedPlayers = new Set(players)
-
-    if (players.length !== verifyiedPlayers.size) {
-      setError("Não podem existir dois jogadores com o mesmo nome")
+    const formData = getFormData(event.currentTarget,['Jogador'])
+    const activeError = hasErrors(formData.Jogador)
+    
+    if(activeError){
+      setError(activeError)
       return
     }
-
-    players.forEach(player => {
-      game.addPlayer(player as string)
-    })
     
     game.startMatch()
+    registerPlayers(formData.Jogador, game)
+
     navigation.next()
-    
   }
 
+  const handleNewPlayer = useCallback((event:React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
+    event.preventDefault()
+    if(playerInputs.length <4){
+      setPlayerInputs([...playerInputs, playerInputs.length + 1])
+    }
+  },[playerInputs])
+
   return (
-    <section>
-      <h1>Adicione os jogadores:</h1>
-      <p>(2 a 4 jogadores)</p>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="Jogador 1">Jogador 1</label>
-        <input type="text" name="Jogador" id="Jogador 1" placeholder='Jogador 1' {...INPUT_PATTERN} />
-
-        <label htmlFor="Jogador 2">Jogador 2</label>
-        <input type="text" name="Jogador" id="Jogador 2" placeholder='Jogador 2' {...INPUT_PATTERN} />
-
-        <label htmlFor="Jogador 3">Jogador 3</label>
-        <input type="text" name="Jogador" id="Jogador 3" placeholder='Jogador 3' {...INPUT_PATTERN} />
-
-        <label htmlFor="Jogador 4">Jogador 4</label>
-        <input type="text" name="Jogador" id="Jogador 4" placeholder='Jogador 4' {...INPUT_PATTERN} />
-
-        {error && <p>{error}</p>}
-        <button type="submit">Iniciar</button>
-      </form>
-    </section>
+    <>
+      <header>
+        <h1>Adicione os jogadores:</h1>
+        <p>(2 a 4 jogadores)</p>
+      </header>
+      <main>
+        <form className="player-form" onSubmit={handleSubmit}>
+          {playerInputs.map( playerInput => 
+            <TextInput key={playerInput} label={`Jogador(a) ${playerInput}`} name="Jogador"  />
+          )}
+          <p className="player-form__error">{error}</p>
+          <div className="player-form__buttons">
+            <Button variant="primary" type="submit">Iniciar</Button>
+            {playerInputs.length < 4 && <Button variant="ghost" onClick={handleNewPlayer}>novo jogador(a)</Button>}
+          </div>
+        </form>
+      </main>
+      <footer></footer>
+    </>
   );
 }
 
