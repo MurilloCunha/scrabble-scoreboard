@@ -26,7 +26,7 @@ const reducer = (state: GameState, action: ACTIONS): GameState => {
       }
     case 'START_MATCH':
       return {
-        ...state,
+        players:[],
         stats: {
           ...state.stats,
           gameDuration: new Date().getTime()
