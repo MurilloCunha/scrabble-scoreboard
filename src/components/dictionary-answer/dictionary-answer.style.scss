@@ -1,0 +1,41 @@
+.dictionary-answer{
+  & h3{
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    margin-bottom: 0.2rem;
+    text-transform: capitalize;
+  }
+  & h4{
+    box-sizing: border-box;
+    font-size: 0.8rem;
+    font-weight: normal;
+    font-style:italic;
+    letter-spacing: 1px;
+    margin-bottom: 0.6rem;
+    text-transform: capitalize;
+  }
+
+  & ul{
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    list-style-type: circle;
+    margin-left:1rem;
+    margin-bottom: 1rem;
+  }
+
+  & li {
+    box-sizing: border-box;
+    margin-bottom:1rem;
+    line-height: 1.25;
+  }
+
+  & span:not(:last-child) {
+    background-color: #ccc;
+    border-radius: 1px;
+    width: 2rem;
+    height: 2px;
+    display: block;
+    box-sizing: border-box;
+    margin:1rem auto;
+  }
+}
