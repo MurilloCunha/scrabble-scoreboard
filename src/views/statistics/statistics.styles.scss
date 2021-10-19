@@ -1,0 +1,14 @@
+.statistics{
+  & li{
+    box-sizing: border-box;
+    margin: 1rem 0;
+    letter-spacing: 1px;
+  }
+  &__buttons{
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+}
