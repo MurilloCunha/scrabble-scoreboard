@@ -5,12 +5,10 @@
   flex-direction: column;
   height: 80vh;
   width: 100%;
-  opacity:0;
-  animation: show var(--showing-time) forwards;
 }
 
 .error404 h1{
-  color: var(--green2);
+  color: green;
   width: 100%;
   text-align: center;
   font-size: 5rem;
@@ -18,7 +16,7 @@
   margin-bottom:1rem;
 }
 .error404 h2{
-  color: var(--green3);
+  color: green;
   width: 100%;
   text-align: center;
   font-size: 1rem;
