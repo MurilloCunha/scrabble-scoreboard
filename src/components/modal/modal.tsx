@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import useFocusTrap from '../../hooks/use-Focus-trap'
 import Button from '../button/button'
 
