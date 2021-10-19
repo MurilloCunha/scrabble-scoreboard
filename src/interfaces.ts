@@ -30,6 +30,24 @@ export interface wordData {
   }[]
 }
 
+export interface DictionaryHook{
+  response: JSX.Element | null,
+  error: {error: string, message: string} | null,
+  isLoading: boolean,
+  get: (str: string) => void
+
+}
+
+export interface trapHook {
+  trap: (event: React.KeyboardEvent<HTMLDivElement>) => void
+}
+
+export interface navigationHook {
+  next: () => void,
+  previous: () => void,
+  home: () => void,
+}
+
 export interface GameHook {
   state: GameState,
   addPlayer: (playerName: string) => void,
@@ -42,4 +60,4 @@ export interface GameHook {
 
 export type StyleVariants = "primary" | "secondary" | "ghost" | "inactive" | "delete" | "transparent"
 
-export const INPUT_PATTERN ='^[a-zA-Z0-9]*$'
+export const INPUT_PATTERN ="^[a-zA-Z0-9]*$"
