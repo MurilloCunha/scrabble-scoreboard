@@ -1,18 +1,10 @@
-import { useEffect } from "react"
 import { useHistory, useLocation } from "react-router"
 import { ROUTES } from "../views/routes"
-import useGame from "./use-game"
 
 function useNavigation() {
   const history = useHistory()
   const location = useLocation()
-  const game = useGame()
 
-  useEffect(() => {
-    if(location.pathname === ROUTES.SCOREBOARD && game.state.players.length === 0){
-      history.push('/')
-    }
-  }, [game.state.players.length, history, location.pathname])
   const next = (): void => {
     switch (location.pathname) {
       case ROUTES.HOME:
@@ -22,7 +14,10 @@ function useNavigation() {
         history.push(ROUTES.SCOREBOARD)
         break;
       case ROUTES.SCOREBOARD:
-        history.push(ROUTES.HOME)
+        history.push(ROUTES.STATISTICS)
+        break;
+      case ROUTES.STATISTICS:
+        history.push(ROUTES.PLAYERS_SETUP)
         break;
       default:
         history.push(ROUTES.NOT_FOUND)
@@ -40,6 +35,9 @@ function useNavigation() {
         break;
       case ROUTES.SCOREBOARD:
         history.push(ROUTES.PLAYERS_SETUP)
+        break;
+      case ROUTES.STATISTICS:
+        history.push(ROUTES.SCOREBOARD)
         break;
       default:
         history.push(ROUTES.NOT_FOUND)
