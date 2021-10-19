@@ -16,8 +16,9 @@
   }
 
   &[data-variant="secondary"]{
-    @include colorize(rgb(127, 161, 127));
-    color: white;
+    @include colorize(rgb(240, 247, 240));
+    color: #777;
+    font-weight: normal;
   }
 
   &[data-variant="ghost"]{

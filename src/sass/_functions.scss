@@ -1,2 +1,5 @@
 /*create reusable functions to use inside componentes*/
 
+@function mainSize(){
+  @return calc(100vh - 6rem)
+}
