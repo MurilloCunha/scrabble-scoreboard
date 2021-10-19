@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import useFocusTrap from '../../hooks/use-Focus-trap'
 import Button from '../button/button'
 
 import './modal.style.scss'
@@ -11,7 +12,7 @@ interface Props extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElem
 function Modal(props: Props) {
   const { children, show = false, ...divProps } = props
   const [visible, setVisible] = useState(show)
-
+  const { trap } = useFocusTrap()
   const handleClick = () => {
     setVisible(!visible)
   }
@@ -23,7 +24,7 @@ function Modal(props: Props) {
   return (
     <>
     {visible &&
-      <div className ="modal__wrapper" {...divProps}>
+      <div className ="modal__wrapper" {...divProps} aria-modal="true" onKeyDown={trap}>
         <div className="modal">
           <Button variant='transparent' onClick={handleClick}>X</Button>
           {children}
