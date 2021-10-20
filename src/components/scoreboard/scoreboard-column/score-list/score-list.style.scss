@@ -1,17 +1,19 @@
+  @import "../../../../sass/variables";
+  @import "../../../../sass/mixins";
+  
   .score-list{
     height: 20vh;
     overflow: hidden auto;
     width: 100%;
  
   &__score{
-    width: 100%;
-    font-size:1rem;
-    text-align: center;
-    height: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: $secondary;
     cursor: pointer;
-    color: rgb(13, 172, 13);
+    font-size:1rem;
+    height: 2.5rem;
+    text-align: center;
+    width: 100%;
+
+    @include flex(center,center);
   }
 }

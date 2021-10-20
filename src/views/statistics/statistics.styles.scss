@@ -1,3 +1,5 @@
+@import "../../sass/mixins";
+
 .statistics{
   & li{
     box-sizing: border-box;
@@ -5,10 +7,8 @@
     letter-spacing: 1px;
   }
   &__buttons{
-    align-items: center;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
     
+    @include flex(center,center);   
   }
 }

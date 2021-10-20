@@ -1,26 +1,28 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
 .modal{
-  background-color: #FFF;
+  background-color: $background;
   border-radius: 12px;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
   max-height: 80vh;
   overflow: hidden auto;
   padding: 1.5rem;
   width:100%;
+
+  @include flex(flex-start,center,column);
   
   &__wrapper{
-    align-items: center;
-    background-color: rgba(0,0,0,0.5);
+    background-color: $modal-fade;
     box-sizing: border-box;
-    display: flex;
     height: 100vh;
-    justify-content: center;
     left:0;
     padding:2rem;
     position: absolute;
     top:0;
     width:100%;
+
+    @include flex(center);
   }
 
   & > button{

@@ -1,7 +1,9 @@
+@import "../../sass/mixins";
+
 .scoreboard {
   box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
   width: 100%;
   max-width: 25rem;
+
+  @include flex(flex-start,space-between);
 }

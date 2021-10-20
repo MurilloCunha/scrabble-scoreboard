@@ -1,14 +1,15 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
 .error404{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   height: 80vh;
   width: 100%;
+
+  @include flex(center,center,column);
 }
 
 .error404 h1{
-  color: green;
+  color: $primary;
   width: 100%;
   text-align: center;
   font-size: 5rem;
@@ -16,7 +17,7 @@
   margin-bottom:1rem;
 }
 .error404 h2{
-  color: green;
+  color: $primary;
   width: 100%;
   text-align: center;
   font-size: 1rem;
