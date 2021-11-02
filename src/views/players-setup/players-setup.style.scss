@@ -1,0 +1,24 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.player-form{
+  box-sizing: border-box;
+  height: 100%;
+  margin: 2rem 0;
+  width: 100%;
+
+  @include flex(center,space-around,column);
+
+
+  &__buttons{
+    width: 100%;
+
+    @include flex(center,center);
+
+  }
+
+  &__error{
+    color: $error;
+    font-size: 0.8rem;
+  }
+}

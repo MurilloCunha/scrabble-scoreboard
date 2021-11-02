@@ -1,0 +1,75 @@
+@import "./variables";
+
+@mixin colorize($color){
+  background-color: $color;
+  
+  &:hover{
+    background-color: darken($color,8%);
+  }
+}
+
+@mixin variants(){
+
+  &[data-variant="primary"]{
+    @include colorize($primary);
+    color: $contrast-text;
+  }
+
+  &[data-variant="secondary"]{
+    @include colorize($secondary);
+    color: $inactive;
+    font-weight: normal;
+  }
+
+  &[data-variant="ghost"]{
+    @include colorize($background);
+    border:1px solid $primary;
+    color: $primary;
+  }
+
+  &[data-variant="inactive"]{
+    @include colorize($inactive-bg);
+    color: $inactive;
+    cursor: not-allowed;
+  }
+
+  &[data-variant="delete"]{
+    @include colorize(transparent);
+    border:none;
+    border-radius: 100%;
+    height: 1.5rem;
+    width: 1.5rem;
+    padding:0;
+    margin-left:1rem;
+    font-size:0.8rem;
+    color: $error;
+  }
+
+  &[data-variant="transparent"]{
+    @include colorize(transparent);
+    color: $text;
+    height:3rem;
+    width: 3rem;
+    padding:0.8rem;
+    border:none;
+    box-shadow: none;
+    margin:0;
+
+    &:hover{
+      box-shadow: none;
+    }
+  }
+}
+
+@mixin flex($align:flex-start, $justify:center,$dir:row){
+  align-items: $align;
+  display: flex;
+  justify-content: $justify;
+  flex-direction: $dir;
+}
+
+@mixin border(){
+  border:none;
+  border-radius: 8px;
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+}

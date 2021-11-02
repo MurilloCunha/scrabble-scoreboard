@@ -1,0 +1,14 @@
+@import "../../sass/mixins.scss";
+@import "../../sass/variables.scss";
+
+.card{
+  box-sizing: border-box;
+  color: $primary;
+  min-width: 10rem;
+  min-height: 8rem;
+  padding:1rem;
+  width: 20rem;
+
+  @include flex(center,space-between);
+  @include border();
+}

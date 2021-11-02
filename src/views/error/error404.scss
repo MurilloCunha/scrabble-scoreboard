@@ -1,0 +1,25 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
+.error404{
+  height: 80vh;
+  width: 100%;
+
+  @include flex(center,center,column);
+}
+
+.error404 h1{
+  color: $primary;
+  width: 100%;
+  text-align: center;
+  font-size: 5rem;
+  font-family: inherit;
+  margin-bottom:1rem;
+}
+.error404 h2{
+  color: $primary;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  font-family: inherit;
+}

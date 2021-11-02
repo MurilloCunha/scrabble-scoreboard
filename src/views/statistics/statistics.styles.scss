@@ -1,0 +1,14 @@
+@import "../../sass/mixins";
+
+.statistics{
+  & li{
+    box-sizing: border-box;
+    margin: 1rem 0;
+    letter-spacing: 1px;
+  }
+  &__buttons{
+    width: 100%;
+    
+    @include flex(center,center);   
+  }
+}
